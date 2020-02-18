@@ -1,13 +1,14 @@
+package com.company.practice1;
 import by.gsu.pms.BusinessTrip;
 
 public class Runner {
 
     public static void main(String[] args) {
         BusinessTrip[] businessTrips = {
-                new BusinessTrip("Ivanov", 221, 25),
+                new BusinessTrip("Ivanov", 220000, 25),
                 null,
-                new BusinessTrip("Petrov", 112, 45),
-                new BusinessTrip("Sokolov", 224, 87),
+                new BusinessTrip("Petrov", 112000, 45),
+                new BusinessTrip("Sokolov", 224000, 87),
                 new BusinessTrip()
         };
         for (BusinessTrip businessTrip : businessTrips) {

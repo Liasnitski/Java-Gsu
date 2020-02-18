@@ -1,4 +1,5 @@
 package by.gsu.pms;
+import by.gsu.pms.Converter;
 
 public class BusinessTrip {
 
@@ -38,23 +39,21 @@ public class BusinessTrip {
             this.name = name;
         }
 
-    public double convert(){
-        return this.transExp / 100.0;
-    }
+
 
     public double getTotal() {
-        return this.convert() + RATE * days;
+        return this.transExp + RATE * days;
     }
 
     public String  toString() {
-        return name + ";" + convert() + ";" + days + ";" + getTotal();
+        return name + ";" + Converter.convert((double) transExp, 10000, 2) + ";" + days + ";" + Converter.convert(this.getTotal(), 10000, 2);
     }
 
     public void show()
     {
         System.out.println("Rate = " + this.RATE);
         System.out.println("Account = " + this.name);
-        System.out.println("Transport = " + convert());
+        System.out.println("Transport = " + transExp);
         System.out.println("Days = " + this.days);
         System.out.println("Total = " + this.getTotal());
     }
