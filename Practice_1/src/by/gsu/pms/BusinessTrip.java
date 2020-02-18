@@ -3,7 +3,7 @@ import by.gsu.pms.Converter;
 
 public class BusinessTrip {
 
-    private static final int RATE = 7;
+    private static final int RATE = 25000;
     private String name;
     private int transExp;
     private int days;
