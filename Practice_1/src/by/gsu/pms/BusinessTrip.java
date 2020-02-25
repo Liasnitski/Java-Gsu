@@ -3,17 +3,14 @@ import by.gsu.pms.Converter;
 
 public class BusinessTrip {
 
-    private static final int RATE = 7;
+    private static final int RATE = 25000;
     private String name;
     private int transExp;
     private int days;
 
-    public BusinessTrip() {
-        super();
-    }
+    public BusinessTrip() {}
 
     public BusinessTrip(String name, int transExp, int days) {
-        super();
         this.name = name;
         this.transExp = transExp;
         this.days = days;
@@ -41,8 +38,14 @@ public class BusinessTrip {
 
 
 
-    public double getTotal() {
-        return this.transExp + RATE * days;
+    public int getTotal() {
+        if (days ==1){
+            return transExp;
+        } else if (days > 1){
+            return this.transExp + RATE * days;
+        }else {return 0;}
+
+
     }
 
     public String  toString() {
@@ -51,11 +54,11 @@ public class BusinessTrip {
 
     public void show()
     {
-        System.out.println("Rate = " + this.RATE);
-        System.out.println("Account = " + this.name);
+        System.out.println("Rate = " + RATE);
+        System.out.println("Account = " + name);
         System.out.println("Transport = " + transExp);
-        System.out.println("Days = " + this.days);
-        System.out.println("Total = " + this.getTotal());
+        System.out.println("Days = " + days);
+        System.out.println("Total = " + getTotal());
     }
 }
 

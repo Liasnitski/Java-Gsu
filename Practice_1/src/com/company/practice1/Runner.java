@@ -6,9 +6,11 @@ public class Runner {
     public static void main(String[] args) {
         BusinessTrip[] businessTrips = {
                 new BusinessTrip("Ivanov", 220000, 25),
-                null,
                 new BusinessTrip("Petrov", 112000, 45),
-                new BusinessTrip("Sokolov", 224000, 87),
+                null,
+                new BusinessTrip("Sokolov", 132000, 12),
+                new BusinessTrip("Liasnitski", 114000, 32),
+                new BusinessTrip("Pablo", 44000, 44),
                 new BusinessTrip()
         };
         for (BusinessTrip businessTrip : businessTrips) {
@@ -20,7 +22,7 @@ public class Runner {
         }
         businessTrips[businessTrips.length - 1].setTransExp(5765);
 
-        System.out.println("Duration = " + (businessTrips[0].getTotal() + businessTrips[2].getTotal()));
+        System.out.println("Duration = " + (businessTrips[0].getDays() + businessTrips[1].getDays()));
 
         for (BusinessTrip businessTrip : businessTrips) {
             if (businessTrip != null){
