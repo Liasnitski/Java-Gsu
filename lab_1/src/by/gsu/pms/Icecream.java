@@ -1,6 +1,7 @@
 package by.gsu.pms;
+import java.util.Comparator;
 
-public class Icecream {
+public class Icecream implements Comparable<Icecream> {
     private String name;
     private boolean chocolate;
     private double fat;
@@ -45,5 +46,24 @@ public class Icecream {
         System.out.println("Fat = " + this.fat);
         System.out.println("String = " + toString());
     }
+
+    public int compareTo(Icecream compareIcecream) {
+        if (this.fat < compareIcecream.getFat()) {
+            return -1;
+        } else if (this.fat > compareIcecream.getFat()) {
+            return 1;
+        }
+        return 0;
+    }
+
+    public static Comparator<Icecream> IcecreamNameComparator = new Comparator<Icecream>() {
+
+        public int compare(Icecream icecream1, Icecream icecream2) {
+            String icecreamName1 = icecream1.getName().toUpperCase();
+            String icecreamName2 = icecream2.getName().toUpperCase();
+
+            return icecreamName1.compareTo(icecreamName2);
+        }
+    };
 
 }
