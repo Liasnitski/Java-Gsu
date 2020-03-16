@@ -17,7 +17,6 @@ public class Runner {
                 new Icecream("EightIcecream", false, 11),
         };
 
-
         for (Icecream icecream : icecreams) {
             if (icecream != null) {
                 icecream.show();
@@ -25,8 +24,15 @@ public class Runner {
             }
         }
 
+        double totalFat = 0;
+        int chocolateNumber = 0;
+
         for (int i = 0; i < icecreams.length; ++i) {
-            System.out.println(icecreams[i].toString());
+            System.out.println(icecreams[i]);
+            if (icecreams[i].getChocolate()) {
+                chocolateNumber++;
+            }
+            totalFat += icecreams[i].getFat();
         }
 
         Arrays.sort(icecreams);
@@ -43,19 +49,7 @@ public class Runner {
             System.out.println(icecreams[i].toString());
         }
 
-
-        double averageFat = (icecreams[0].getFat() + icecreams[1].getFat() +
-                icecreams[2].getFat() + icecreams[3].getFat() +
-                icecreams[4].getFat() + icecreams[5].getFat() +
-                icecreams[6].getFat() + icecreams[7].getFat()) / 7;
-        System.out.printf("\nAverage Fat: %.2f ", averageFat);
-
-        int chocolateNumber = 0;
-        for (int i = 0; i < 7; i++) {
-            if (icecreams[i].getChocolate()) {
-                chocolateNumber++;
-            }
-        }
+        System.out.printf("\nAverage Fat: %.2f ", totalFat/icecreams.length);
         System.out.printf("\nChocolate: %d ", chocolateNumber);
 
     }
