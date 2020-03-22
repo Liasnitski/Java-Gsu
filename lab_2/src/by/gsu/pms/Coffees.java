@@ -2,9 +2,9 @@ package by.gsu.pms;
 
 public class Coffees implements Comparable<Coffees> {
 
-    public String coffeeName;
-    public float coffeeSize;
-    public int coffeePrice;
+    private String coffeeName;
+    private float coffeeSize;
+    private int coffeePrice;
 
     public String getCoffeeName() {
         return coffeeName;

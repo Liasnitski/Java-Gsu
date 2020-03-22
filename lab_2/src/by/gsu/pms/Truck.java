@@ -1,8 +1,8 @@
 package by.gsu.pms;
 
 public class Truck {
-    String coffeeName;
-    Coffees[] truckComponents;
+    private String coffeeName;
+    private Coffees[] truckComponents;
 
     public Truck() {
         this.truckComponents = new Coffees[0];

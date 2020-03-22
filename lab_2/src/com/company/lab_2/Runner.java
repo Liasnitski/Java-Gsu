@@ -55,7 +55,7 @@ public class Runner {
 
                         Arrays.sort(trucks[numberTruck - 1].getTruckComponents());
                         for (Coffees coffee : trucks[numberTruck - 1].getTruckComponents()) {
-                            System.out.println(coffee.coffeeName + "  - " + coffee.coffeePrice + " $    " + coffee.coffeeSize + " m3 ");
+                            System.out.println(coffee.getCoffeeName() + "  - " + coffee.getCoffeePrice() + " $    " + coffee.getCoffeeSize() + " m3 ");
                         }
                         break;
                     case 3:
@@ -68,8 +68,8 @@ public class Runner {
                         priceTo = scanner.nextInt();
                         System.out.printf(" -Название-   -Стоимость- \n");
                         for (Coffees coffee : trucks[numberTruck - 1].getTruckComponents()) {
-                            if ((priceFrom <= coffee.coffeePrice) && (coffee.coffeePrice <= priceTo)) {
-                                System.out.println(coffee.coffeeName + "      " + coffee.coffeePrice + " $");
+                            if ((priceFrom <= coffee.getCoffeePrice()) && (coffee.getCoffeePrice()<= priceTo)) {
+                                System.out.println(coffee.getCoffeeName() + "      " + coffee.getCoffeePrice() + " $");
                             }
                         }
                         break;
