@@ -8,21 +8,19 @@ public class Runner {
 
         Subject Wire = new Subject();
 
+        UniformMaterial STEEL = UniformMaterial.STEEL;
         Wire.setNameOfSubject("wire");
         Wire.setVolumeOfSubject(0.03);
-
-        Wire.setNameOfMaterial("steel");
-        Wire.setDensityOfMaterial(7850);
+        Wire.setUniformMaterial(STEEL);
 
         System.out.println(Wire.toString());
 
-        Wire.setNameOfMaterial("copper");
-        Wire.setDensityOfMaterial(8500);
+        UniformMaterial COOPER = UniformMaterial.COOPER;
+        Wire.setUniformMaterial(COOPER);
 
         System.out.println(Wire.toString());
 
-        Wire.setNameOfMaterial("steel");
-        Wire.setDensityOfMaterial(7850);
+        Wire.setUniformMaterial(STEEL);
 
         System.out.println(Wire.toString());
 
