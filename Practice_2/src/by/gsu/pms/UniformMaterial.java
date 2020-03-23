@@ -1,4 +1,35 @@
 package by.gsu.pms;
 
 public class UniformMaterial {
+
+    private String nameOfMaterial;
+    private int densityOfMaterial;
+
+    public UniformMaterial() {}
+
+    public UniformMaterial(String nameOfMaterial, int densityOfMaterial) {
+        this.nameOfMaterial = nameOfMaterial;
+        this.densityOfMaterial = densityOfMaterial;
+    }
+
+    public String getNameOfMaterial(){
+        return nameOfMaterial;
+    }
+
+    public  int getDensityOfMaterial(){
+        return densityOfMaterial;
+    }
+
+    public void setNameOfMaterial( String nameOfMaterial){
+        this.nameOfMaterial = nameOfMaterial;
+    }
+
+    public void setDensityOfMaterial(int densityOfMaterial) {
+        this.densityOfMaterial = densityOfMaterial;
+    }
+
+    @Override
+    public String toString() {
+        return nameOfMaterial + "; " + densityOfMaterial;
+    }
 }
