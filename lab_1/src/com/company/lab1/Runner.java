@@ -17,20 +17,14 @@ public class Runner {
                 new Icecream("EightIcecream", false, 11),
         };
 
-        for (Icecream icecream : icecreams) {
-            if (icecream != null) {
-                icecream.show();
-                System.out.println();
-            }
-        }
 
         double totalFat = 0;
-        int chocolateNumber = 0;
+        int icecreamWithChocolate = 0;
 
         for (int i = 0; i < icecreams.length; ++i) {
             System.out.println(icecreams[i]);
             if (icecreams[i].getChocolate()) {
-                chocolateNumber++;
+                icecreamWithChocolate++;
             }
             totalFat += icecreams[i].getFat();
         }
@@ -39,18 +33,18 @@ public class Runner {
         System.out.println();
 
         for (int i = 0; i < icecreams.length; ++i) {
-            System.out.println(icecreams[i].toString());
+            System.out.println(icecreams[i]);
         }
 
         Arrays.sort(icecreams, Icecream.IcecreamNameComparator);
         System.out.println();
 
         for (int i = 0; i < icecreams.length; ++i) {
-            System.out.println(icecreams[i].toString());
+            System.out.println(icecreams[i]);
         }
 
         System.out.printf("\nAverage Fat: %.2f ", totalFat/icecreams.length);
-        System.out.printf("\nChocolate: %d ", chocolateNumber);
+        System.out.printf("\nChocolate: %d ", icecreamWithChocolate);
 
     }
 }
