@@ -26,9 +26,6 @@ public class Runner {
 
         System.out.println(Wire.toString());
 
-
-
-
     }
 }
 
