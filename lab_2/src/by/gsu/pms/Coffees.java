@@ -44,4 +44,8 @@ public class Coffees implements Comparable<Coffees> {
     public int compareTo(Coffees compareCoffee) {
         return this.coffeePrice - compareCoffee.getCoffeePrice();
     }
+
+    public String infoAboutClass (){
+        return  "Coffee - Coffee";
+    }
 }
