@@ -34,4 +34,8 @@ public class Solubles implements Coffees {
     public int compareTo(Coffees compareCoffee) {
         return this.coffeePrice - compareCoffee.getCoffeePrice();
     }
+
+    public String infoAboutClass() {
+        return  coffeeName + "; " + coffeePrice + "; " + coffeeSize;
+    }
 }

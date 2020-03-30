@@ -16,4 +16,8 @@ public interface Coffees extends Comparable<Coffees> {
     void setCoffeePrice(int coffeePrice);
 
     int compareTo(Coffees compareCoffee);
+
+    public interface Printable{
+        void infoAboutClass();
+    };
 }
