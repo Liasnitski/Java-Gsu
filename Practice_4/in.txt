@@ -1,0 +1,11 @@
+daily-rate=44
+indices=1;4;15
+account01=Liasnitski
+transport01=32
+days01=12
+account04=Petrov
+transport04=11
+days04=4
+account15=Sidorov
+transport15=43
+days15=2
